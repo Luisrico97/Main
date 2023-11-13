@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/fragment">
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.rimomo.trucazo.Fragment"
+        android:label="fragment_"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_fragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirsFragment"
+        android:name="com.rimomo.trucazo.ThirdFragment"
+        android:label="fragment_thirs"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_thirsFragment_to_fragment"
+            app:destination="@id/fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.rimomo.trucazo.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_thirsFragment"
+            app:destination="@id/thirsFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_fragment"
+            app:destination="@id/fragment" />
+    </fragment>
+</navigation>
